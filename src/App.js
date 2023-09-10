@@ -1,9 +1,14 @@
+import Header from "./components/Header";
+import ItemListContainer from "./components/ItemListContainer";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Header/>
+      <NavBar/>
+      <ItemListContainer cliente ="Lilia"/>
+    </>
   );
 }
 

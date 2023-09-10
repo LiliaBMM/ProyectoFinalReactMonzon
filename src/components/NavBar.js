@@ -1,8 +1,13 @@
-import React from 'react'
+import Cartwidget from "./Cartwidget"
 
 function NavBar() {
   return (
-    <div>NavBar</div>
+    <nav className="flex justify-around items-center py-4 px-2 bg-fuchsia-300">
+        <a href=" ">Inicio</a>
+        <a href=" ">Cosméticos</a>
+        <a href=" ">SkinCare</a>
+        <a href=" "><Cartwidget/> </a>
+    </nav>
   )
 }
 
