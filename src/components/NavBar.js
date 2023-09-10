@@ -1,12 +1,13 @@
-import Cartwidget from "./Cartwidget"
+import Cartwidget from "./Cartwidget";
+import { NavLink } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <nav className="flex justify-around items-center py-4 px-2 bg-fuchsia-300">
-        <a href=" ">Inicio</a>
-        <a href=" ">Cosméticos</a>
-        <a href=" ">SkinCare</a>
-        <a href=" "><Cartwidget/> </a>
+    <nav className="flex justify-around items-center py-4 px-2 bg-fuchsia-300 text-rose-600">
+      <NavLink to="/">Inicio</NavLink>
+      <NavLink to={`/category/maquillaje`}>Maquillaje</NavLink>
+      <NavLink to={`/category/skincare`}>Skincare</NavLink>
+      <NavLink to="/carrito"><Cartwidget/></NavLink>
     </nav>
   )
 }
