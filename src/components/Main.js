@@ -12,9 +12,10 @@ function Main() {
                 <Route path="/category/:categoria" element = {<ItemListContainer/>}/>
                 <Route path="/category/:categoria" element = {<ItemListContainer/>}/>
                 <Route path="/carrito" element = {<p>Carrito</p>}/>
-            </Routes>
+        </Routes>
     </main>
   )
 }
 
 export default Main
+ 

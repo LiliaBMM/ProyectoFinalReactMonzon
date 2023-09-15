@@ -2,14 +2,16 @@ import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 const Item = ({props}) => {
+
      const {nombre, img, stock, precio,  id} = props
-      return(
+
+     return(
         <article className="card shadow-lg p-4 rounden-md font-sans text-lg text-fuchsia-600">
             <h2 className="flex justify-center">Nombre: {nombre}</h2>
             <img src={img} alt={nombre} />
             <hr />
             <p>Precio: ${precio}</p>
-            <section> 
+            <section>
                 <ItemCount inicial={0} stock={stock} onAdd={(cantidad) => (
                    <p>Cantidad agregada: {cantidad}</p>
             )}/>    
