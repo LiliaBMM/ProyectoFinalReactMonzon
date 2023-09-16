@@ -11,10 +11,10 @@ const ItemCart = ({producto}) => {
         <h2 className="flex justify-center">Nombre: {nombre}</h2>
         <img src={img} alt={nombre} />
         <hr />
-        <p>Precio: ${precio}</p>
-        <p>Cantidad: {cantidad}</p>
-        <p>SubTotal: ${cantidad * precio}</p>
-        <button onClick={() => removeCart(id)}>Eliminar</button>
+        <p className="font-serif text-sm text-fuchsia-600">Precio: ${precio}</p>
+        <p className="font-serif text-sm text-fuchsia-600">Cantidad: {cantidad}</p>
+        <p className="font-serif text-sm text-fuchsia-600">SubTotal: ${cantidad * precio}</p>
+        <button className="border p-1 rounded px-3 bg-fuchsia-300" onClick={() => removeCart(id)}>Eliminar</button>
     </article>
   )
 }

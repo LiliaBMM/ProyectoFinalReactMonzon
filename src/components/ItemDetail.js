@@ -14,14 +14,14 @@ const ItemDetail = ({producto}) => {
 
     }
     return(
-        <article>
-            <h2>Nombre: {producto.nombre}</h2>
-            <img src={producto.img} alt={producto.nombre} />
+        <article className="card shadow-lg p-4 rounden-md font-sans text-lg text-fuchsia-600 text-center">
+            <h2 className="flex justify-center">Nombre: {producto.nombre}</h2>
+            <img  src={producto.img} alt={producto.nombre}/>
             <hr />
-            <p>Categoria: {producto.categoria}</p>
-            <p>Precio: ${producto.precio}</p>
-            <p>Stock disponible: {producto.stock}</p>
-            <p>Información: {producto.descripcion}</p>
+            <p className="font-serif text-sm text-fuchsia-600">Categoria: {producto.categoria}</p>
+            <p className="font-serif text-sm text-fuchsia-600">Precio: ${producto.precio}</p>
+            <p className="font-serif text-sm text-fuchsia-600">Stock disponible: {producto.stock}</p>
+            <p className="font-serif text-sm text-fuchsia-600">Información: {producto.descripcion}</p>
             <div>
                 {
                     goToCart > 0 ? (

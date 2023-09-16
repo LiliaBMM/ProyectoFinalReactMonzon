@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ItemLists from "./ItemLists";
-import {getProducto,getProductByCategoria} from "../asyncMock";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, getFirestore, query , where } from "firebase/firestore";
 
 
 function ItemListContainer(greeting) {
@@ -11,24 +11,17 @@ function ItemListContainer(greeting) {
   const {categoria} = useParams()
   
   useEffect(() => {
-    if(categoria !== undefined){
-      getProductByCategoria(categoria)
-     .then(response => {
-        setProducto(response)
-      })
-     .catch(error => {
-      console.error(error);
-     })
-    }else{
-      getProducto()
-     .then(response => {
-        setProducto(response)
-     })
-     .catch(error => {
-      console.error(error);
-     })
-    }
-  },[categoria])
+      const db = getFirestore();
+      const productoColeccion = collection(db, 'productos');
+      if (categoria) {
+          const productByCategoria = query(productoColeccion, where('categoria', '==', categoria))
+          getDocs(productByCategoria)
+             .then(res => setProducto(res.docs.map(produto => ({id: produto.id, ...produto.data()}))))
+      }else{
+          getDocs(productoColeccion)
+             .then(res => setProducto(res.docs.map(produto => ({id: produto.id, ...produto.data()})))) 
+            }
+      },[categoria])
 
   return (
     <>

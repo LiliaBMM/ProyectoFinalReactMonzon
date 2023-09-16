@@ -9,7 +9,7 @@ const Item = ({props}) => {
             <h2 className="flex justify-center">Nombre: {nombre}</h2>
             <img src={img} alt={nombre} />
             <hr />
-            <p>Precio: ${precio}</p>
+            <p className="font-serif text-sm text-fuchsia-600">Precio: ${precio}</p>
             <section className="flex justify-center"> 
                 <Link to = {`/item/${id}`} className="border p-1 rounded px-3 bg-fuchsia-300">Ver Detalle</Link>
             </section>
