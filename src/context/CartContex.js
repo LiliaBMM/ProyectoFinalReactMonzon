@@ -17,8 +17,7 @@ const CartProvider = ({children}) => {
             setCart([...cart, {...item, cantidad }]);
         }
     }
-    console.log('carrito:' , cart);
-
+   
     const precioTotal = () => {
         return cart.reduce((cuenta, actual) => cuenta + actual.cantidad * actual.precio, 0);
     }
@@ -45,7 +44,6 @@ const CartProvider = ({children}) => {
             {children}
         </CartContext.Provider>
     )
-
 }
 
 export default CartProvider;

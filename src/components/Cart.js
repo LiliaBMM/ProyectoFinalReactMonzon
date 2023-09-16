@@ -23,7 +23,7 @@ const Cart = () => {
       const db = getFirestore()
       const coleccionorden = collection(db, 'ordenes')
       addDoc(coleccionorden, orden)
-        .then(({id}) => console.log(id))
+        .then(({id}) => console.log('orden generada y enviada a firebase: ',id))
     }
 
     if(cart.length === 0) {

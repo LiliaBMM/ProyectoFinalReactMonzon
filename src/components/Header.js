@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 function Header() {
   return (
     <div className="flex justify-around items-center px-6">
