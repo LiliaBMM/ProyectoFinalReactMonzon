@@ -16,3 +16,13 @@ La app cuenta con una barra de navegacion que permite ir a las categorias de maq
 Cada producto tiene tiene la opcion de detalle, que al seleccionar mostrara la descripcion del producto, el stock disponible y la opcion de agregarlo al carrito
 
 El proyecto importa su base de datos de Firebase y a dicha base de datos a su vez se le manda las ordenes de compra. Estos proceso se hacen por medio de promesas
+
+TECNOLOGIAS USADAS:
+react-dom: 18.2.0
+react-router-dom: 6.15.0
+firebase
+tailwind
+css
+nodeJS
+github
+
