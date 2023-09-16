@@ -1,3 +1,4 @@
+import Cart from "./Cart";
 import ItemDetailContainer from "./ItemDetailContainer";
 import ItemListContainer from "./ItemListContainer";
 import {Routes, Route} from "react-router-dom"
@@ -10,8 +11,7 @@ function Main() {
                 <Route path="/" element = {<ItemListContainer cliente = "Lilia"/>}/>
                 <Route path="/item/:id" element = {<ItemDetailContainer/> }/>
                 <Route path="/category/:categoria" element = {<ItemListContainer/>}/>
-                <Route path="/category/:categoria" element = {<ItemListContainer/>}/>
-                <Route path="/carrito" element = {<p>Carrito</p>}/>
+                <Route path="/cart" element = {<Cart/>}/>
         </Routes>
     </main>
   )

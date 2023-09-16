@@ -7,7 +7,7 @@ function NavBar() {
       <NavLink to="/">Inicio</NavLink>
       <NavLink to={`/category/maquillaje`}>Maquillaje</NavLink>
       <NavLink to={`/category/skincare`}>Skincare</NavLink>
-      <NavLink to="/carrito"><Cartwidget/></NavLink>
+      <NavLink to="/cart"><Cartwidget/></NavLink>
     </nav>
   )
 }

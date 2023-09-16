@@ -1,10 +1,18 @@
+import { Link } from "react-router-dom";
+import { useCartContext } from "../context/CartContex"
 
-function Cartwidget() {
+
+const Cartwidget = () => {
+
+ const { productosTotal } = useCartContext ();
+
+
   return (
-    <div className="flex">  
+      <Link to='/cart' className="flex " style={{display: productosTotal() > 0 ? 'block' : 'none'}}>  
         <img src="/shoppingcart.png" alt="" />
-        <span>1</span>
-    </div>
+        {productosTotal()}
+      </Link>
+          
   )
 }
 
