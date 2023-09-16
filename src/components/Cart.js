@@ -7,6 +7,8 @@ import { addDoc, collection, getFirestore } from 'firebase/firestore';
 const Cart = () => {
 
     const {cart, precioTotal, clearCart} = useCartContext();
+    const Swal = require('sweetalert2')
+
 
     const orden = {
       buyer: {
@@ -23,7 +25,7 @@ const Cart = () => {
       const db = getFirestore()
       const coleccionorden = collection(db, 'ordenes')
       addDoc(coleccionorden, orden)
-        .then(({id}) => console.log('orden generada y enviada a firebase: ',id))
+        .then(({id}) => Swal.fire('orden generada y enviada a firebase: ',id))
     }
 
     if(cart.length === 0) {
